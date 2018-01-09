@@ -45,7 +45,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">Check Out / In<b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-toggle">
-                            <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckOut">Check Out</a></li>
+                            <li><a asp-area="" asp-controller="CheckOuts" asp-action="Create">Check Out</a></li>
                             <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckIn">Check In</a></li>
                         </ul>
                     </li>
@@ -71,6 +71,13 @@
                                 <ul class="dropdown-menu">
                                     <li><a asp-area="" asp-controller="MediaTypeGenres" asp-action="Create">Add Media Type / Genre</a></li>
                                     <li><a asp-area="" asp-controller="MediaTypeGenres" asp-action="Index">Update Media Type / Genre</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Type / Format</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="MediaTypeFormats" asp-action="Create">Add Media Type / Format</a></li>
+                                    <li><a asp-area="" asp-controller="MediaTypeFormats" asp-action="Index">Update Media Type / Format</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
