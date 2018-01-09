@@ -1,0 +1,47 @@
+﻿@model IEnumerable<NW_Central_Library.Models.LibraryModels.MediaContent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContentItemOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContentItem)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Media)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentItemOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Media.Author)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ContentId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ContentId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

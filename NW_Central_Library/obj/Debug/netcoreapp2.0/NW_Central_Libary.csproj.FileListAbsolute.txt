@@ -1,0 +1,12 @@
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.csprojResolveAssemblyReference.cache
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.csproj.CoreCompileInputs.cache
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.AssemblyInfoInputs.cache
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.AssemblyInfo.cs
+C:\Users\Eolsu\source\repos\NW_Central_Libary\bin\Debug\netcoreapp2.0\NW_Central_Libary.deps.json
+C:\Users\Eolsu\source\repos\NW_Central_Libary\bin\Debug\netcoreapp2.0\NW_Central_Libary.runtimeconfig.json
+C:\Users\Eolsu\source\repos\NW_Central_Libary\bin\Debug\netcoreapp2.0\NW_Central_Libary.runtimeconfig.dev.json
+C:\Users\Eolsu\source\repos\NW_Central_Libary\bin\Debug\netcoreapp2.0\NW_Central_Libary.dll
+C:\Users\Eolsu\source\repos\NW_Central_Libary\bin\Debug\netcoreapp2.0\NW_Central_Libary.pdb
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.dll
+C:\Users\Eolsu\source\repos\NW_Central_Libary\obj\Debug\netcoreapp2.0\NW_Central_Libary.pdb
