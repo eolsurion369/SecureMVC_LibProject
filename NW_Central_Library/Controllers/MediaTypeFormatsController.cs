@@ -19,7 +19,7 @@ namespace NW_Central_Library.Controllers
             _context = context;
         }
 
-    
+        [Authorize]
         // GET: MediaTypeFormats
         public async Task<IActionResult> Index()
         {

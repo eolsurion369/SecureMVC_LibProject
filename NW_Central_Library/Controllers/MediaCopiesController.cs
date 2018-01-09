@@ -19,7 +19,7 @@ namespace NW_Central_Library.Controllers
             _context = context;
         }
 
-
+        //[Authorize]
         // GET: MediaCopies
         public async Task<IActionResult> Index()
         {
@@ -49,14 +49,14 @@ namespace NW_Central_Library.Controllers
             return View(mediaCopy);
         }
 
-        [Authorize]
+        //[Authorize]
         // GET: MediaCopies/Create
         public IActionResult Create()
         {
-            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Author");
-            ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Id");
-            ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Id");
-            ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Id");
+            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Title");
+            ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Format");
+            ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Name");
+            ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Type");
             return View();
         }
 
@@ -73,7 +73,7 @@ namespace NW_Central_Library.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Author", mediaCopy.MediaId);
+            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Title", mediaCopy.MediaId);
             ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Id", mediaCopy.MediaFormatId);
             ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Id", mediaCopy.MediaGenreId);
             ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Id", mediaCopy.MediaTypeId);
@@ -93,7 +93,7 @@ namespace NW_Central_Library.Controllers
             {
                 return NotFound();
             }
-            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Author", mediaCopy.MediaId);
+            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Title", mediaCopy.MediaId);
             ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Id", mediaCopy.MediaFormatId);
             ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Id", mediaCopy.MediaGenreId);
             ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Id", mediaCopy.MediaTypeId);
@@ -132,7 +132,7 @@ namespace NW_Central_Library.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Author", mediaCopy.MediaId);
+            ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Title", mediaCopy.MediaId);
             ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Id", mediaCopy.MediaFormatId);
             ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Id", mediaCopy.MediaGenreId);
             ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Id", mediaCopy.MediaTypeId);
