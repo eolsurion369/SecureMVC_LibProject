@@ -10,6 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="react.js" Version="0.14.7" />
+    <PackageReference Include="React.Web.Mvc4" Version="3.2.0" />
   </ItemGroup>
 
   <ItemGroup>

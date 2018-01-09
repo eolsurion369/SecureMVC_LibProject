@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "bf2fa39bd487900a883ba09fb48ad66acaf40d8e"
+    "signature": "425d9f18ca4a2d7764dd40f9b1373a2ff156b704"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,9 @@
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1",
+          "React.Web.Mvc4": "3.2.0",
+          "react.js": "0.14.7"
         },
         "runtime": {
           "NW_Central_Library.dll": {}
@@ -2501,6 +2503,15 @@
         },
         "compile": {
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
+        }
+      },
+      "react.js/0.14.7": {},
+      "React.Web.Mvc4/3.2.0": {
+        "runtime": {
+          "lib/net40/React.Web.Mvc4.dll": {}
+        },
+        "compile": {
+          "lib/net40/React.Web.Mvc4.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -5462,6 +5473,20 @@
       "sha512": "sha512-WCkN68c8q+USG+Ot1MmBDH+9DUo5dk7UB0QDMiwCYhrH7ZoFLKFGGNzJ8C3LTR1DvB1LW9BOxKeznnZznKiCTA==",
       "path": "nuget.frameworks/4.0.0",
       "hashPath": "nuget.frameworks.4.0.0.nupkg.sha512"
+    },
+    "react.js/0.14.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vuiy4eCBUzaAHE7QGiQPueMajINZprnC3742+tv5hQIlsAJJ9iI+kg58EsqO4jbVkOlMW9G2kS0mPSwgOZJoZQ==",
+      "path": "react.js/0.14.7",
+      "hashPath": "react.js.0.14.7.nupkg.sha512"
+    },
+    "React.Web.Mvc4/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+SSh/lvKLWqrWwdgh07vBPZNJ5q6s2x61J0CHgWwksK7sAh/o1zXtNSjdxvm9R9YT4jDyzGx53cVXmnCIRijhg==",
+      "path": "react.web.mvc4/3.2.0",
+      "hashPath": "react.web.mvc4.3.2.0.nupkg.sha512"
     },
     "Remotion.Linq/2.1.1": {
       "type": "package",
