@@ -1,0 +1,12 @@
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\bin\Debug\netcoreapp2.0\WebApplication4.deps.json
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\bin\Debug\netcoreapp2.0\WebApplication4.runtimeconfig.json
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\bin\Debug\netcoreapp2.0\WebApplication4.runtimeconfig.dev.json
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\bin\Debug\netcoreapp2.0\WebApplication4.dll
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\bin\Debug\netcoreapp2.0\WebApplication4.pdb
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.csprojResolveAssemblyReference.cache
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.csproj.CoreCompileInputs.cache
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.AssemblyInfoInputs.cache
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.AssemblyInfo.cs
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.dll
+C:\Users\Eolsu\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.0\WebApplication4.pdb
