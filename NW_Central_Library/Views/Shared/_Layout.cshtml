@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - NW_Central_Library</title>
+    <title>@ViewData["Title"] - NW Central Library</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -17,8 +17,11 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="container-fluid" id=topImage>
+        <img src="~/images/nwCentralBookStacks_sm.jpg">
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -26,13 +29,75 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">NW_Central_Library</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">NW Central Library</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">Membership<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-toggle">
+                            <li><a asp-area="" asp-controller="AdultMembers" asp-action="Create">Adult Member</a></li>
+                            <li><a asp-area="" asp-controller="JuvenileMembers" asp-action="Create">Juvenile Member</a></li>
+                            @*<li><a asp-area="" asp-controller="JuvenileMembers" asp-action="Create">Renew Membership</a></li>
+                            <li><a asp-area="" asp-controller="JuvenileMembers" asp-action="Create">Promote Juvenile To Adult Member</a></li>*@
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">Check Out / In<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-toggle">
+                            <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckOut">Check Out</a></li>
+                            <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckIn">Check In</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">Admin<b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-level">
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Genre</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="Genres" asp-action="Create">Add Genre</a></li>
+                                    <li><a asp-area="" asp-controller="Genres" asp-action="Index">Update Genre</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Type</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="MediaTypes" asp-action="Create">Add Media Type</a></li>
+                                    <li><a asp-area="" asp-controller="MediaTypes" asp-action="Index">Update Media Type</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Type / Genre</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="MediaTypeGenres" asp-action="Create">Add Media Type / Genre</a></li>
+                                    <li><a asp-area="" asp-controller="MediaTypeGenres" asp-action="Index">Update Media Type / Genre</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Format</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="MediaFormats" asp-action="Create">Add Media Format</a></li>
+                                    <li><a asp-area="" asp-controller="MediaFormats" asp-action="Index">Update Media Format</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Copy</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="MediaCopies" asp-action="Create">Add Media Copy</a></li>
+                                    <li><a asp-area="" asp-controller="MediaCopies" asp-action="Index">Update Media Copy</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a data-toggle="dropdown" class="dropdown-toggle">Media Entry</a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="Media" asp-action="Create">Add Media</a></li>
+                                    <li><a asp-area="" asp-controller="Media" asp-action="Index">Update Media</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="About" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Contact" asp-action="Contact">Contact</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
