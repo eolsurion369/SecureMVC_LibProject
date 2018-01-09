@@ -47,7 +47,7 @@ namespace NW_Central_Library.Controllers
         // GET: JuvenileMembers/Create
         public IActionResult Create()
         {
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName");
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FullName");
             return View();
         }
 

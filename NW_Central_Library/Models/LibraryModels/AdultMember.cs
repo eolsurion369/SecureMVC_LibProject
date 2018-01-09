@@ -23,6 +23,8 @@ namespace NW_Central_Library.Models.LibraryModels
         public bool? InActive { get; set; }
         public DateTime? InActiveDate { get; set; }
 
+        public string FullName => $"{LastName}, {FirstName} {MidInit}";
+
         public ICollection<AdultMemberAddress> AdultMemberAddress { get; set; }
         public ICollection<CheckOut> CheckOut { get; set; }
         public ICollection<JuvenileMember> JuvenileMember { get; set; }

@@ -1,41 +1,62 @@
-﻿@model IEnumerable<NW_Central_Library.Models.LibraryModels.About>
-
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    Layout = null;
 }
 
-<h2>Index</h2>
+<html>
+<head>
+    <title>
+        Hello React
+    </title>
+</head>
+<body>
+    <div id="root">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+        <script src="@Url.Content("~/Scripts/About.jsx")"></script>
+    </div>
+</body>
+</html>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.LibraryName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LibraryDesc)
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LibraryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LibraryDesc)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+@*@model IEnumerable<NW_Central_Library.Models.LibraryModels.About>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h2>Index</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LibraryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LibraryDesc)
+                    </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LibraryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LibraryDesc)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+
