@@ -18,6 +18,10 @@ namespace NW_Central_Library.Controllers
             _context = context;
         }
 
+<<<<<<< HEAD
+=======
+        [Authorize]
+>>>>>>> DevBranch
         // GET: MediaTypeFormats
         public async Task<IActionResult> Index()
         {
