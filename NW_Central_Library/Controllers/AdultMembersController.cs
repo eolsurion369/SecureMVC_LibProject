@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,7 @@ namespace NW_Central_Library.Controllers
             return View(adultMember);
         }
 
+        [Authorize]
         // GET: AdultMembers/Create
         public IActionResult Create()
         {
