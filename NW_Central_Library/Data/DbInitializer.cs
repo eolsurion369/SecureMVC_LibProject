@@ -6,9 +6,9 @@ using NW_Central_Library.Models.LibraryModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace NW_Central_Library.Data
+namespace WebApplication4.Data
 {
-    public class LibDbInitializer
+    public class DbInitializer
     {
         public static void Initialize(LibProjectContext context)
         {
@@ -432,7 +432,7 @@ namespace NW_Central_Library.Data
                 new Phone {PhoneNum = "(206) 678-9012", InActive = null, InActiveDate = null}
             };
 
-            foreach (Phone pNum in pNums) { context.Phone.Add(pNum); };
+            foreach(Phone pNum in pNums) { context.Phone.Add(pNum); };
             context.SaveChanges();
 
             var mPnums = new MemberPhone[]
@@ -445,19 +445,8 @@ namespace NW_Central_Library.Data
                 new MemberPhone { AdultId = 4, JuvenileId = 2, PhoneId = 6, PhoneTypeId = "h"}
             };
 
-            foreach (MemberPhone mPnum in mPnums) { context.MemberPhone.Add(mPnum); };
+            foreach(MemberPhone mPnum in mPnums) { context.MemberPhone.Add(mPnum); };
             context.SaveChanges();
         }
     }
-
-    public class SecDbInitializer
-    {
-        public static void Initialize(ApplicationDbContext context)
-        {
-            if (context.Database.GetPendingMigrations().Any()) context.Database.Migrate();
-
-        }
-
-    };
 }
-

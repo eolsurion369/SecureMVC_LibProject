@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +18,6 @@ namespace NW_Central_Library.Controllers
             _context = context;
         }
 
-    
         // GET: MediaTypeFormats
         public async Task<IActionResult> Index()
         {
@@ -47,7 +45,6 @@ namespace NW_Central_Library.Controllers
             return View(mediaTypeFormat);
         }
 
-        [Authorize]
         // GET: MediaTypeFormats/Create
         public IActionResult Create()
         {

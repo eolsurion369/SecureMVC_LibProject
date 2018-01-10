@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NW_Central_Library.Models.LibraryModels;
-using NW_Central_Library.Data;
 
 namespace NW_Central_Library
 {
@@ -24,12 +22,9 @@ namespace NW_Central_Library
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var libContext = services.GetRequiredService<LibProjectContext>();
-                    Data.LibDbInitializer.Initialize(libContext);
-
-                    var secContext = services.GetRequiredService<ApplicationDbContext>();
-                    Data.SecDbInitializer.Initialize(secContext);
-                                    }
+                    //var context = services.GetRequiredService<LibProjectContext>();
+                    //Data.DbInitializer.Initialize(context);
+                }
                 catch (Exception ex)
                 {
                     var logger = services.GetRequiredService<ILogger<Program>>();

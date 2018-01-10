@@ -45,7 +45,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle">Check Out / In<b class="caret"></b></a>
                         <ul class="dropdown-menu dropdown-toggle">
-                            <li><a asp-area="" asp-controller="CheckOuts" asp-action="Create">Check Out</a></li>
+                            <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckOut">Check Out</a></li>
                             <li><a asp-area="" asp-controller="CheckOutIn" asp-action="CheckIn">Check In</a></li>
                         </ul>
                     </li>
@@ -96,7 +96,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a asp-area="" asp-controller="About" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Abouts" asp-action="Index">About</a></li>
                     <li><a asp-area="" asp-controller="Contact" asp-action="Contact">Contact</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
