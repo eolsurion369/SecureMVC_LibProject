@@ -47,7 +47,7 @@ namespace NW_Central_Library.Controllers
         // GET: Addresses/Create
         public IActionResult Create()
         {
-            ViewData["AddrTypeId"] = new SelectList(_context.AddrType, "Id", "Id");
+            ViewData["AddrTypeId"] = new SelectList(_context.AddrType, "Id", "Type");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace NW_Central_Library.Controllers
             {
                 return NotFound();
             }
-            ViewData["AddrTypeId"] = new SelectList(_context.AddrType, "Id", "Id", address.AddrTypeId);
+            ViewData["AddrTypeId"] = new SelectList(_context.AddrType, "Id", "Type", address.AddrTypeId);
             return View(address);
         }
 

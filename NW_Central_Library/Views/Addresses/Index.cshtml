@@ -12,30 +12,31 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.AddrLn1)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AddrLn2)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.City)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.State)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Zip)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActive)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActiveDate)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrLn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrLn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.AddrType)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActiveDate)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -58,18 +59,18 @@
                 @Html.DisplayFor(modelItem => item.Zip)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.AddrType.Type)
+            </td>
+
+            <td>
                 @Html.DisplayFor(modelItem => item.InActive)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.InActiveDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AddrType.Id)
-            </td>
-            <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
             </td>
         </tr>
 }
