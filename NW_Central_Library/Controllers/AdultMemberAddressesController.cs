@@ -48,8 +48,8 @@ namespace NW_Central_Library.Controllers
         // GET: AdultMemberAddresses/Create
         public IActionResult Create()
         {
-            ViewData["AddressId"] = new SelectList(_context.Address, "Id", "AddrLn1");
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName");
+            ViewData["AddressId"] = new SelectList(_context.Address, "Id", "Address Line 1");
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "First Name");
             return View();
         }
 
@@ -84,8 +84,8 @@ namespace NW_Central_Library.Controllers
             {
                 return NotFound();
             }
-            ViewData["AddressId"] = new SelectList(_context.Address, "Id", "AddrLn1", adultMemberAddress.AddressId);
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", adultMemberAddress.AdultId);
+            ViewData["AddressId"] = new SelectList(_context.Address, "Id", "Address Line 1", adultMemberAddress.AddressId);
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "First Name", adultMemberAddress.AdultId);
             return View(adultMemberAddress);
         }
 

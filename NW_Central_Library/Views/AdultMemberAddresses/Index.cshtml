@@ -12,18 +12,19 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActive)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActiveDate)
-                </th>
             <th>
                 @Html.DisplayNameFor(model => model.Address)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Adult)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActiveDate)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -31,21 +32,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.InActive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InActiveDate)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Address.AddrLn1)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Adult.FirstName)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.InActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InActiveDate)
+            </td>
+
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }
