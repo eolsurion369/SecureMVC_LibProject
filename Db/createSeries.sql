@@ -1,0 +1,4 @@
+CREATE TABLE Series (
+ID int IDENTITY PRIMARY KEY,
+Name varchar(90) NOT NULL
+)

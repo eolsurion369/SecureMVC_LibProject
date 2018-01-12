@@ -1,0 +1,33 @@
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csprojResolveAssemblyReference.cache
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csproj.CoreCompileInputs.cache
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfoInputs.cache
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfo.cs
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.deps.json
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.json
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.dev.json
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.dll
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.pdb
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.dll
+D:\School Projects\CoderCamps\Projects\NewApi\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.pdb
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.deps.json
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.json
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.dev.json
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.dll
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.pdb
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csprojResolveAssemblyReference.cache
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csproj.CoreCompileInputs.cache
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfoInputs.cache
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfo.cs
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.dll
+D:\School Projects\CoderCamps\Projects\newFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.pdb
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.deps.json
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.json
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.runtimeconfig.dev.json
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.dll
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\bin\Debug\netcoreapp2.0\LipProject_Api.pdb
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csprojResolveAssemblyReference.cache
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.csproj.CoreCompileInputs.cache
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfoInputs.cache
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.AssemblyInfo.cs
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.dll
+C:\Projects_2017\NewFinalProject\Api\LipProject_Api\obj\Debug\netcoreapp2.0\LipProject_Api.pdb
