@@ -12,18 +12,19 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.JuvenileId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DueDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CheckedInDate)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JuvenileId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Adult)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckedInDate)
+            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.MediaCopy)
             </th>
@@ -37,13 +38,13 @@
                 @Html.DisplayFor(modelItem => item.JuvenileId)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Adult.FirstName)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CheckedInDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adult.FirstName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MediaCopy.MediaFormatId)

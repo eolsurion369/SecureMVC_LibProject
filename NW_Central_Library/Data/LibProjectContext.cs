@@ -11,7 +11,7 @@ namespace NW_Central_Library.Models.LibraryModels
         public virtual DbSet<AddrType> AddrType { get; set; }
         public virtual DbSet<AdultMember> AdultMember { get; set; }
         public virtual DbSet<AdultMemberAddress> AdultMemberAddress { get; set; }
-        public virtual DbSet<CheckOut> CheckOut { get; set; }
+        public virtual DbSet<CheckOut> CheckIns { get; set; }
         public virtual DbSet<Email> Email { get; set; }
         public virtual DbSet<Genre> Genre { get; set; }
         public virtual DbSet<JuvenileMember> JuvenileMember { get; set; }

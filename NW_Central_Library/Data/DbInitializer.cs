@@ -350,7 +350,7 @@ namespace NW_Central_Library.Data
                 new CheckOut { AdultId = 2, JuvenileId = null, MediaCopyId = 39, DueDate = DateTime.Parse("2018-01-13"), CheckedInDate = null },
             };
 
-            foreach (CheckOut cOut in cOuts) { context.CheckOut.Add(cOut); };
+            foreach (CheckOut cOut in cOuts) { context.CheckIns.Add(cOut); };
             context.SaveChanges();
 
             var aTypes = new AddrType[]

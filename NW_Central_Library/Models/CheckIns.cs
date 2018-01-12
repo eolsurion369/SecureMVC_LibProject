@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NW_Central_Library.Models.LibraryModels
 {
-    public partial class CheckOut
+    public class CheckIns
     {
         [Display(Name = "Adult Id")]
         public int AdultId { get; set; }
@@ -14,9 +16,6 @@ namespace NW_Central_Library.Models.LibraryModels
 
         [Display(Name = "Media Copy Id")]
         public int MediaCopyId { get; set; }
-
-        [Display(Name = "Due Date")]
-        public DateTime DueDate { get; set; }
 
         [Display(Name = "Checked In Date")]
         public DateTime? CheckedInDate { get; set; }

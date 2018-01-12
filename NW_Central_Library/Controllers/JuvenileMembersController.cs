@@ -49,7 +49,7 @@ namespace NW_Central_Library.Controllers
         // GET: JuvenileMembers/Create
         public IActionResult Create()
         {
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName");
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "First Name");
             return View();
         }
 
@@ -83,7 +83,7 @@ namespace NW_Central_Library.Controllers
             {
                 return NotFound();
             }
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", juvenileMember.AdultId);
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "First Name", juvenileMember.AdultId);
             return View(juvenileMember);
         }
 
