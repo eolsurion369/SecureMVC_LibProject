@@ -10,23 +10,24 @@ using NW_Central_Library.Models.LibraryModels;
 
 namespace NW_Central_Library.Controllers
 {
-    public class CheckOutsController : Controller
+    public class CheckInsController : Controller
     {
         private readonly LibProjectContext _context;
+        private object checkIns;
 
-        public CheckOutsController(LibProjectContext context)
+        public CheckInsController(LibProjectContext context)
         {
             _context = context;
         }
 
-        // GET: CheckOuts
+        // GET: CheckIns
         public async Task<IActionResult> Index()
         {
-            var libProjectContext = _context.CheckOut.Include(c => c.Adult).Include(c => c.MediaCopy);
+            var libProjectContext = _context.CheckIns.Include(c => c.Adult).Include(c => c.MediaCopy);
             return View(await libProjectContext.ToListAsync());
         }
 
-        // GET: CheckOuts/Details/5
+        // GET: CheckIns/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,23 +35,23 @@ namespace NW_Central_Library.Controllers
                 return NotFound();
             }
 
-            var checkOut = await _context.CheckOut
+            var checIn = await _context.CheckIns
                 .Include(c => c.Adult)
                 .Include(c => c.MediaCopy)
                 .SingleOrDefaultAsync(m => m.AdultId == id);
-            if (checkOut == null)
+            if (checkIns == null)
             {
                 return NotFound();
             }
 
-            return View(checkOut);
+            return View(checkIns);
         }
         [Authorize]
-        // GET: CheckOuts/Create
+        // GET: CheckIns/Create
         public IActionResult Create()
         {
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName");
-            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId");
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "Full Name");
+            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "Media Format Id");
             return View();
         }
 
@@ -59,20 +60,20 @@ namespace NW_Central_Library.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AdultId,JuvenileId,MediaCopyId,DueDate,CheckedInDate")] CheckOut checkOut)
+        public async Task<IActionResult> Create([Bind("AdultId,JuvenileId,MediaCopyId,DueDate,CheckedInDate")] CheckIn checkIn)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(checkOut);
+                _context.Add(checkIn);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", checkOut.AdultId);
-            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkOut.MediaCopyId);
-            return View(checkOut);
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", checkIn.AdultId);
+            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkIn.MediaCopyId);
+            return View(checkIn);
         }
 
-        // GET: CheckOuts/Edit/5
+        // GET: CheckIns/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,24 +81,24 @@ namespace NW_Central_Library.Controllers
                 return NotFound();
             }
 
-            var checkOut = await _context.CheckOut.SingleOrDefaultAsync(m => m.AdultId == id);
-            if (checkOut == null)
+            var checkIn = await _context.CheckIns.SingleOrDefaultAsync(m => m.AdultId == id);
+            if (checkIn == null)
             {
                 return NotFound();
             }
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", checkOut.AdultId);
-            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkOut.MediaCopyId);
-            return View(checkOut);
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FullName", checkIn.AdultId);
+            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkIn.MediaCopyId);
+            return View(checkIn);
         }
 
-        // POST: CheckOuts/Edit/5
+        // POST: CheckIns/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AdultId,JuvenileId,MediaCopyId,DueDate,CheckedInDate")] CheckOut checkOut)
+        public async Task<IActionResult> Edit(int id, [Bind("AdultId,JuvenileId,MediaCopyId,DueDate,CheckedInDate")] CheckIn checkIn)
         {
-            if (id != checkOut.AdultId)
+            if (id != checkIn.AdultId)
             {
                 return NotFound();
             }
@@ -106,12 +107,12 @@ namespace NW_Central_Library.Controllers
             {
                 try
                 {
-                    _context.Update(checkOut);
+                    _context.Update(checkIn);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CheckOutExists(checkOut.AdultId))
+                    if (!CheckOutExists(checkIn.AdultId))
                     {
                         return NotFound();
                     }
@@ -122,12 +123,12 @@ namespace NW_Central_Library.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", checkOut.AdultId);
-            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkOut.MediaCopyId);
-            return View(checkOut);
+            ViewData["AdultId"] = new SelectList(_context.AdultMember, "Id", "FirstName", checkIn.AdultId);
+            ViewData["MediaCopyId"] = new SelectList(_context.MediaCopy, "Id", "MediaFormatId", checkIn.MediaCopyId);
+            return View(checkIn);
         }
 
-        // GET: CheckOuts/Delete/5
+        // GET: CheckIns/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,32 +136,32 @@ namespace NW_Central_Library.Controllers
                 return NotFound();
             }
 
-            var checkOut = await _context.CheckOut
+            var checkIn = await _context.CheckIns
                 .Include(c => c.Adult)
                 .Include(c => c.MediaCopy)
                 .SingleOrDefaultAsync(m => m.AdultId == id);
-            if (checkOut == null)
+            if (checkIn == null)
             {
                 return NotFound();
             }
 
-            return View(checkOut);
+            return View(checkIn);
         }
 
-        // POST: CheckOuts/Delete/5
+        // POST: CheckIns/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var checkOut = await _context.CheckOut.SingleOrDefaultAsync(m => m.AdultId == id);
-            _context.CheckOut.Remove(checkOut);
+            var checkOut = await _context.CheckIns.SingleOrDefaultAsync(m => m.AdultId == id);
+            _context.CheckIns.Remove(checkOut);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CheckOutExists(int id)
+        private bool CheckInExists(int id)
         {
-            return _context.CheckOut.Any(e => e.AdultId == id);
+            return _context.CheckIns.Any(e => e.AdultId == id);
         }
     }
 }

@@ -34,6 +34,8 @@ namespace NW_Central_Library.Models.LibraryModels
         [Display(Name = "Inactive Date")]
         public DateTime? InActiveDate { get; set; }
 
+        public string MediaInfo => $"{Media.Title} - {MediaFormat.Format} - {CopyNumber}";
+
         public Media Media { get; set; }
         public MediaFormat MediaFormat { get; set; }
         public Genre MediaGenre { get; set; }

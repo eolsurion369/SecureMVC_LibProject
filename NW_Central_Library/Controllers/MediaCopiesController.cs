@@ -74,9 +74,9 @@ namespace NW_Central_Library.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["MediaId"] = new SelectList(_context.Media, "Id", "Author", mediaCopy.MediaId);
-            ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Id", mediaCopy.MediaFormatId);
-            ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Id", mediaCopy.MediaGenreId);
-            ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Id", mediaCopy.MediaTypeId);
+            ViewData["MediaFormatId"] = new SelectList(_context.MediaFormat, "Id", "Format", mediaCopy.MediaFormatId);
+            ViewData["MediaGenreId"] = new SelectList(_context.Genre, "Id", "Genre", mediaCopy.MediaGenreId);
+            ViewData["MediaTypeId"] = new SelectList(_context.MediaType, "Id", "Media Type", mediaCopy.MediaTypeId);
             return View(mediaCopy);
         }
 
