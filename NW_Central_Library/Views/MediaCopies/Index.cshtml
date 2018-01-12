@@ -12,15 +12,6 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.CopyNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActive)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InActiveDate)
-                </th>
             <th>
                 @Html.DisplayNameFor(model => model.Media)
             </th>
@@ -33,12 +24,33 @@
             <th>
                 @Html.DisplayNameFor(model => model.MediaType)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CopyNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InActiveDate)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Media.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaFormat.Format)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaGenre.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaType.Type)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CopyNumber)
             </td>
@@ -49,21 +61,8 @@
                 @Html.DisplayFor(modelItem => item.InActiveDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Media.Author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MediaFormat.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MediaGenre.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MediaType.Id)
-            </td>
-            <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
             </td>
         </tr>
 }
